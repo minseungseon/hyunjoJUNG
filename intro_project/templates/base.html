@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            color: coral;
+        }
+    </style>
+    <title>현조 블로그</title>
+    <h1>Hyunjo's Blog</h1>
+</head>
+<style>
+    h2 {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: gray;
+    }
+    h3 {
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: gray;
+    }
+</style>
+<body>
+    {% block contents %}
+    {% endblock %}
+    </body>
+<footer>
+    <style>
+        h5 {
+            text-align: center;
+        }
+    </style>
+    <h5><a href="{% url 'home' %}">HOME</a></h5>
+    <h5><a href="{% url 'profile' %}">PROFILE</a></h5>
+    <h5><a href="{% url 'artwork' %}">ARTWORK</a></h5>
+    <h5><a href="https://www.instagram.com/jan_fifth/?hl=ko">INSTAGRAM</a></h5>
+</footer>
+</html>

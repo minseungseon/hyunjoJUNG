@@ -1,0 +1,59 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        h1 {
+            text-align: center;
+            font-size: 35px;
+            color: coral;
+        }
+
+        img {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 80%;
+            height: 80%;
+            z-index: 1;
+        }
+    </style>
+    <title>현조 블로그</title>
+    <h1>Hyunjo's Blog</h1>
+</head>
+<style>
+    h2 {
+        text-align: center;
+        font-size: 15px;
+        margin-bottom: 10px;
+        color: gray;
+    }
+    h3 {
+        text-align: center;
+        font-size: 13px;
+        margin-bottom: 10px;
+        color: gray;
+    }
+</style>
+<body>
+        {% block contents %}
+        <h2>　</h2>
+        <h2>PROFILE</h2>
+        <h3><i>얼굴은 민망해서 가렸어요..........</i></h3>
+        <h2>　</h2>
+        <img src="{% static 'img/profile1.jpg' %}" />
+        {% endblock %}
+    </body>
+<footer>
+    <style>
+        h5 {
+            text-align: center;
+        }
+    </style>
+    <h5><a href="{% url 'home' %}">HOME</a></h5>
+    <h5><a href="{% url 'artwork' %}">ARTWORK</a></h5>
+    <h5><a href="https://www.instagram.com/jan_fifth/?hl=ko">INSTAGRAM</a></h5>
+</footer>
+</html>
